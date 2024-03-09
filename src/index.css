@@ -1,0 +1,139 @@
+:root{
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to left, rgb(28, 3, 49), #544458);
+}
+
+
+body {
+  margin: 1px;
+  color: rgb(10, 205, 134);
+  text-align: center;
+}
+
+h2{
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  border-bottom: 1px solid #fff;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-shadow: #333;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+  
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+header h1 {
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.filters {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+select {
+  width: max-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+option {
+  padding: 5px;
+}
+
+
+.top-10-table{
+  width: 95%;
+  margin: 0 auto;
+  table-layout: fixed;
+  min-height: 440px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow-y: scroll;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+  th {
+    background-color: rgba(242, 242, 242, 0.5);
+    font-weight: bold;
+  }
+
+  td {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.5);
+  }
+
+    tbody tr:hover {
+      background-color: rgb(10, 205, 134);
+    }
+
+  .graphs-section {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
