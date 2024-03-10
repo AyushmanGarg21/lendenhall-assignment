@@ -1,6 +1,7 @@
 
 import Header from './components/Header';
 import BrokerSection from './sections/BrokerSection';
+import ChatBot from './sections/ChatBotSection';
 import ClassSection from './sections/ClassSection';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/class" element={<ClassSection />} />
         </Routes>
       </Router>
+      <ChatBot />
     </div>
   )
 }

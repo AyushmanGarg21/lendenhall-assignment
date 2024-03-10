@@ -208,16 +208,16 @@ th, td {
     color: #fff;
   }
 
-  .chatbox-message.sent {
-    background-color: #526D82;
-    
+  .chatbox-message.received {
+    background-color: #cccbcbbe;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: #333;
     border-bottom-right-radius: 10px;
   }
 
-  .chatbox-message.received {
-    background-color: #9DB2BF;
+  .chatbox-message.sent {
+    background-color: #000dff;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;

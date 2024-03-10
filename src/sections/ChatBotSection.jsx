@@ -2,21 +2,32 @@
 import { useEffect, useState } from 'react';
 import Robot from "../assets/robot.gif";
 import Send from "../assets/send.png";
+import responseAI from '../../api/AiResponse';
 
 
 const ChatBot = () => {
 
     const [toggled, disabled] = useState(false);
-    const [messages, setMessages] = useState(["Hi, How can I help you?"]);
-    const [currentMessage, setCurrentMessage] = useState('');
+    const [messages, setMessages] = useState([]);
+    const [currentMessage, setCurrentMessage] = useState("");
+    const [receivedMessage, setReceivedMessage] = useState("");
 
     // Handle chatbot messages
-    const handleOnSubmit = (message) => {
-        if(message !== ''){
+    const handleOnSubmit = async (message) => {
+        setCurrentMessage("");
+        if(message !== " "){
             setMessages([...messages, message]);
+            const recMes = await responseAI(message);
+            setReceivedMessage(recMes);
         }
-        setCurrentMessage('');
+        
     };
+
+    useEffect(() => {
+        if(receivedMessage !== ''){
+            setMessages([...messages, receivedMessage]);
+        }
+    }, [receivedMessage]);
 
     return (
         <>
@@ -30,7 +41,7 @@ const ChatBot = () => {
                     </div>
                     <div className='chatbox-body'>
                         {messages.map((message, i) => (
-                            <div key={i} className={`chatbox-message ${i % 2 === 0 ? 'received' : 'sent'}`}>
+                            <div key={i} className={`chatbox-message ${i % 2 === 0 ? 'sent' : 'received'}`}>
                                 <p>{message}</p>
                             </div>
                         ))}

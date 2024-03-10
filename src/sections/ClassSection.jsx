@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import DashboardData from '../assets/DashboardData.json';
 import ClassTable from '../components/ClassTable';
-import ChatBot from './ChatBotSection';
 import ClassGraphs from '../components/ClassGraphSection';
 
 const ClassSection = () => {
@@ -54,7 +53,6 @@ const ClassSection = () => {
             </div>
             <ClassTable filteredData={filteredData} />
             <ClassGraphs filteredData={filteredData} />
-            <ChatBot />
         </>
     );
 };
