@@ -1,8 +1,7 @@
-# React + Vite
+# Lendelhall Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a dashboard that provides analysis for brokers and business classes. It includes various graphs and tables to visualize the data. Additionally, it features a chat bot that can respond to queries based on the data displayed on the dashboard.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Libraries Used
+- [openai](https://www.npmjs.com/package/openai): A powerful library for performing chat bot tasks.
+- [recharts](https://www.npmjs.com/package/recharts): A lightweight library for handling Graphs functionality.
